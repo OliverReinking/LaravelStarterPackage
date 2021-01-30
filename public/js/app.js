@@ -2090,6 +2090,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
  //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -19788,7 +19792,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "max-w-6xl mx-auto" }, [
+  return _c("div", { staticClass: "max-w-6xl mx-auto pb-32" }, [
     _c("div", { staticClass: "flex flex-col" }, [
       _c(
         "div",
@@ -19797,87 +19801,127 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("h1", { staticClass: "mt-8 text-5xl" }, [
+      _c("h1", { staticClass: "docu-title" }, [
         _vm._v("Laravel Starter Package")
       ]),
       _vm._v(" "),
-      _c("h2", { staticClass: "mt-8 text-3xl" }, [
+      _c("h2", { staticClass: "docu-subtitle" }, [
         _vm._v("Implementation documentation")
       ]),
       _vm._v(" "),
-      _c("h3", { staticClass: "mt-8 text-2xl" }, [_vm._v("Installation")]),
+      _c("h3", { staticClass: "docu-caption" }, [_vm._v("Installation")]),
+      _vm._v(" "),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v(
+          "composer global remove laravel/installer\ncomposer global require laravel/installer\nlaravel --version"
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "docu-text" }, [
+        _vm._v(
+          "\n                laravel/framework had version 8.12 on 15.01.2021\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("h3", { staticClass: "docu-caption" }, [_vm._v("Database")]),
+      _vm._v(" "),
+      _c("div", [
+        _vm._v(
+          "\n                The following database values were entered in .env:\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v(
+          "DB_CONNECTION=mysql\nDB_HOST=127.0.0.1\nDB_PORT=3306\nDB_DATABASE=laravelstarterpackage-test\nDB_USERNAME=root\nDB_PASSWORD=12345678"
+        )
+      ]),
+      _vm._v(" "),
+      _c("h3", { staticClass: "docu-caption" }, [_vm._v("Configuration")]),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _c("div", [
+      _c("h3", { staticClass: "docu-caption" }, [
         _vm._v(
-          "\n            laravel/framework had version 8.12 on 15.01.2021\n        "
+          "\n                Installation of vue, less and tailwindcss\n            "
         )
       ]),
       _vm._v(" "),
-      _c("h3", { staticClass: "mt-8 text-2xl" }, [_vm._v("Database")]),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v(
+          "npm install\nnpm install vue --save-dev\nnpm install vue-template-compiler --save-dev\nnpm install less --save-dev\nnpm install less-loader --save-dev\nnpm install tailwindcss --save-dev\nnpm install laravel-mix-tailwind --save-dev\nnpm install autoprefixer --save-dev"
+        )
+      ]),
       _vm._v(" "),
       _vm._m(1),
       _vm._v(" "),
-      _c("h3", { staticClass: "mt-8 text-2xl" }, [_vm._v("Configuration")]),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mt-8 text-2xl" }, [
+      _c("pre", { staticClass: "docu-code" }, [
         _vm._v(
-          "\n            Installation of vue, less and tailwindcss\n        "
+          '@import "tailwindcss/base";\n@import "tailwindcss/components";\n@import "tailwindcss/utilities";'
         )
       ]),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
       _vm._v(" "),
       _c("div", [_vm._v("Now we create the file tailwind.config.js")]),
       _vm._v(" "),
-      _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-        _vm._v("\n            npx tailwindcss init\n        ")
-      ]),
+      _c("pre", { staticClass: "docu-code" }, [_vm._v("npx tailwindcss init")]),
       _vm._v(" "),
       _c("div", [_vm._v("Add the following to tailwind.config.js:")]),
       _vm._v(" "),
-      _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
+      _c("pre", { staticClass: "docu-code" }, [
         _vm._v(
-          '\n            purge: ["./resources/views/**/*.blade.php",\n            "./resources/js/**/*.vue"],\n        '
+          'future: {\n    removeDeprecatedGapUtilities: true,\n    purgeLayersByDefault: true\n},\npurge: ["./resources/views/**/*.blade.php", "./resources/js/**/*.vue"],'
         )
       ]),
-      _vm._v(
-        "\n\n        Now we customize the webpack.mix.js file:\n\n        "
-      ),
-      _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-        _vm._v(
-          '\n            const mix = require("laravel-mix"); const tailwindcss =\n            require("tailwindcss"); require("laravel-mix-tailwind");\n            mix.js("resources/js/app.js", "public/js/app.js")\n            .less("resources/less/app.less", "public/css/app.css")\n            .options({ postCss: [tailwindcss("./tailwind.config.js")], });\n        '
-        )
-      ]),
-      _vm._v(" "),
-      _c("h3", { staticClass: "mt-8 text-2xl" }, [_vm._v("Last Steps")]),
       _vm._v(" "),
       _c("div", [
         _vm._v(
-          "\n            Now make the following modifications in package.json:\n        "
+          "\n                Now we customize the webpack.mix.js file:\n            "
         )
       ]),
       _vm._v(" "),
-      _vm._m(6),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v(
+          'const mix = require("laravel-mix");\nconst tailwindcss = require("tailwindcss");\nrequire("laravel-mix-tailwind");\nmix.js("resources/js/app.js", "public/js/app.js")\n    .less("resources/less/app.less", "public/css/app.css")\n    .options({\n        postCss: [tailwindcss("./tailwind.config.js")],\n    });'
+        )
+      ]),
+      _vm._v(" "),
+      _c("h3", { staticClass: "docu-caption" }, [_vm._v("Last Steps")]),
+      _vm._v(" "),
+      _c("div", [
+        _vm._v("\n                Remove laravel-mix:\n            ")
+      ]),
+      _vm._v(" "),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v(
+          "npm uninstall laravel-mix --save-dev\nnpm install laravel-mix@5.0.9 --save-dev"
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _vm._v(
+          "\n                Now make the following modifications in package.json:\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v(
+          '"scripts": {\n    "dev": "npm run development",\n    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",\n    "watch": "npm run development -- --watch",\n    "watch-poll": "npm run watch -- --watch-poll",\n    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",\n    "prod": "npm run production",\n    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"\n},'
+        )
+      ]),
       _vm._v(" "),
       _c("div", [_vm._v("And still install:")]),
       _vm._v(" "),
-      _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-        _vm._v("\n            npm install cross-env --save-dev\n        ")
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v("npm install cross-env --save-dev")
       ]),
       _vm._v(" "),
       _c("div", [_vm._v("Now run the following command:")]),
       _vm._v(" "),
-      _vm._m(7),
+      _c("pre", { staticClass: "docu-code" }, [
+        _vm._v("npm run watch\nvalet link")
+      ]),
       _vm._v(" "),
-      _vm._m(8)
+      _vm._m(2)
     ])
   ])
 }
@@ -19886,80 +19930,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-      _vm._v(
-        "\n            composer global remove laravel/installer\n            "
-      ),
-      _c("br"),
-      _vm._v(
-        "\n            composer global require laravel/installer\n            "
-      ),
-      _c("br"),
-      _vm._v("\n            laravel --version\n        ")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", [
       _vm._v(
-        "\n            The following database values were entered in .env:\n            "
+        "\n                Open the app.php file in the config directory."
       ),
       _c("br"),
-      _vm._v("\n            DB_CONNECTION=mysql"),
+      _vm._v("\n                Change the following values:"),
       _c("br"),
-      _vm._v("\n            DB_HOST=127.0.0.1"),
+      _vm._v("\n                'timezone' => 'Europe/Berlin',"),
       _c("br"),
-      _vm._v("\n            DB_PORT=3306"),
+      _vm._v("\n                'locale' => 'de',"),
       _c("br"),
-      _vm._v("\n            DB_DATABASE=laravelstarterpackage-test"),
+      _vm._v("\n                'fallback_locale' => 'de',"),
       _c("br"),
-      _vm._v("\n            DB_USERNAME=root"),
-      _c("br"),
-      _vm._v("\n            DB_PASSWORD=12345678"),
-      _c("br")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _vm._v("\n            Open the app.php file in the config directory."),
-      _c("br"),
-      _vm._v("\n            Change the following values:"),
-      _c("br"),
-      _vm._v("\n            'timezone' => 'Europe/Berlin',"),
-      _c("br"),
-      _vm._v("\n            'locale' => 'de',"),
-      _c("br"),
-      _vm._v("\n            'fallback_locale' => 'de',"),
-      _c("br"),
-      _vm._v("\n            'faker_locale' => 'de',"),
-      _c("br")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-      _vm._v("\n            npm install"),
-      _c("br"),
-      _vm._v("\n            npm install vue --save-dev"),
-      _c("br"),
-      _vm._v("\n            npm install vue-template-compiler --save-dev"),
-      _c("br"),
-      _vm._v("\n            npm install less --save-dev"),
-      _c("br"),
-      _vm._v("\n            npm install less-loader --save-dev"),
-      _c("br"),
-      _vm._v("\n            npm install tailwindcss --save-dev"),
-      _c("br"),
-      _vm._v("\n            npm install laravel-mix-tailwind --save-dev"),
-      _c("br"),
-      _vm._v("\n            npm install autoprefixer --save-dev"),
+      _vm._v("\n                'faker_locale' => 'de',"),
       _c("br")
     ])
   },
@@ -19969,67 +19953,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _vm._v(
-        "\n            Remove the css directory under resources. Create the new\n            directory less under resources/js."
+        "\n                Remove the css directory under resources. Create the new\n                directory less under resources/js."
       ),
       _c("br"),
       _vm._v(
-        "\n            For this new directory create the file app.less with the\n            following content:"
+        "\n                For this new directory create the file app.less with the\n                following content:"
       ),
       _c("br")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-      _vm._v('\n            @import "tailwindcss/base"; '),
-      _c("br"),
-      _vm._v('\n            @import "tailwindcss/components"; '),
-      _c("br"),
-      _vm._v('\n            @import "tailwindcss/utilities"; '),
-      _c("br")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-      _vm._v('\n            "scripts": {'),
-      _c("br"),
-      _vm._v('\n            "dev": "npm run development",'),
-      _c("br"),
-      _vm._v(
-        '\n            "development": "cross-env NODE_ENV=development\n            node_modules/webpack/bin/webpack.js --progress --hide-modules\n            --config=node_modules/laravel-mix/setup/webpack.config.js",'
-      ),
-      _c("br"),
-      _vm._v('\n            "watch": "npm run development -- --watch",'),
-      _c("br"),
-      _vm._v('\n            "watch-poll": "npm run watch -- --watch-poll",'),
-      _c("br"),
-      _vm._v(
-        '\n            "hot": "cross-env NODE_ENV=development\n            node_modules/webpack-dev-server/bin/webpack-dev-server.js\n            --inline --hot --disable-host-check\n            --config=node_modules/laravel-mix/setup/webpack.config.js",'
-      ),
-      _c("br"),
-      _vm._v('\n            "prod": "npm run production",'),
-      _c("br"),
-      _vm._v(
-        '\n            "production": "cross-env NODE_ENV=production\n            node_modules/webpack/bin/webpack.js --no-progress --hide-modules\n            --config=node_modules/laravel-mix/setup/webpack.config.js"'
-      ),
-      _c("br"),
-      _vm._v("\n            },"),
-      _c("br")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("code", { staticClass: "bg-gray-100 my-2 p-2" }, [
-      _vm._v("\n            npm run watch\n            "),
-      _c("br"),
-      _vm._v("\n            valet link\n        ")
     ])
   },
   function() {
@@ -20038,10 +19968,18 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _vm._v(
-        "\n            Then call the following address in the browser:\n            "
+        "\n                Then call the following address in the browser:\n                "
       ),
       _c("br"),
-      _vm._v("\n            http://laravelstarterpackage.test/\n        ")
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "docu-link",
+          attrs: { href: "http://laravelstarterpackage.test" }
+        },
+        [_vm._v("http://laravelstarterpackage.test")]
+      )
     ])
   }
 ]
@@ -29032,8 +28970,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\Projekte\Code\LaravelStarterPackage\code\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\Projekte\Code\LaravelStarterPackage\code\resources\less\app.less */"./resources/less/app.less");
+__webpack_require__(/*! F:\Projekte\Code\LaravelStarterPackage\laravelstarterpackage\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\Projekte\Code\LaravelStarterPackage\laravelstarterpackage\resources\less\app.less */"./resources/less/app.less");
 
 
 /***/ })

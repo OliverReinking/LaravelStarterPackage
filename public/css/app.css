@@ -580,6 +580,123 @@ video {
   }
 }
 
+.docu-title {
+  font-size: 3rem;
+  line-height: 1;
+  line-height: 1.5;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.docu-subtitle {
+  --tw-border-opacity: 1;
+  border-color: rgba(17, 24, 39, var(--tw-border-opacity));
+  border-bottom-width: 1px;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.docu-caption {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.docu-subcaption {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.docu-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.docu-code {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  line-height: 1.375;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow: auto;
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.docu-link {
+  border-radius: 0.5rem;
+  display: inline-block;
+  line-height: 1.375;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.docu-link:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.docu-link:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.docu-button {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+  display: inline-block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  width: 12rem;
+}
+
+.docu-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.docu-button:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
