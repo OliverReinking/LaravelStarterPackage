@@ -8,7 +8,8 @@ This Laravel starter package consists of the following components:
 ## Get started
 
 Execute the following commands: 
-
+    
+    Rename the file .env.example to .env
     composer install 
     npm install 
     php artisan serve 
